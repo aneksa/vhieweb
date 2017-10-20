@@ -1,11 +1,28 @@
 name: 'Main Menu'
 items:
     -
-        title: 'Home'
+        title: Home
+        nesting: ''
         type: cms-page
+        url: ''
         code: ''
         reference: home
+        cmsPage: ''
+        replace: ''
         viewBag:
             isExternal: '0'
             isHidden: '0'
             cssClass: ''
+    -
+        title: About
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: about
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

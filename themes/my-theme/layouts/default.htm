@@ -2,7 +2,6 @@ description = "Default layout"
 
 [session]
 security = "all"
-
 ==
 <!DOCTYPE html>
 <html>
@@ -17,7 +16,8 @@ security = "all"
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
+    <body class="homepage">
+        <div id="page-wrapper">
         {% partial 'header' %}
 
         {% page %}
@@ -51,6 +51,6 @@ security = "all"
         {% partial 'tracker' %}
 
         {% partial 'flash' %}
-
+        </div>
     </body>
 </html>

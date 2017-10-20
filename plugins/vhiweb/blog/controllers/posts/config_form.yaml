@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Post
+
+# Model Form Field configuration
+form: $/vhiweb/blog/models/post/fields.yaml
+
+# Model Class name
+modelClass: VhiWeb\Blog\Models\Post
+
+# Default redirect location
+defaultRedirect: vhiweb/blog/posts
+
+# Create page
+create:
+    title: Create Post
+    redirect: vhiweb/blog/posts/update/:id
+    redirectClose: vhiweb/blog/posts
+
+# Update page
+update:
+    title: Edit Post
+    redirect: vhiweb/blog/posts
+    redirectClose: vhiweb/blog/posts
+
+# Preview page
+preview:
+    title: Preview Post

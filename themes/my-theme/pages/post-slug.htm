@@ -1,0 +1,13 @@
+title = "Post-slug"
+url = "/post/:slug"
+layout = "default"
+is_hidden = 0
+
+[postContent]
+setFindType = "slug"
+==
+<div class="container">
+	<div class="row">
+		{% component 'postContent' %}
+	</div>
+</div>

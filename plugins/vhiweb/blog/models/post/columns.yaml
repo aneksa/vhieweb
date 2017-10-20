@@ -1,0 +1,24 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+        type: number
+    content:
+        label: CONTENT
+        type: text
+    created_at:
+        label: CREATED_AT
+        type: datetime
+    updated_at:
+        label: UPDATED_AT
+        type: datetime
+    slug:
+        label: SLUG
+        type: text
+    title:
+        label: TITLE
+        type: text
