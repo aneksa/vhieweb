@@ -20,7 +20,7 @@ class PostContent extends ComponentBase
         return [
             'setFindType' => [
                 'title' => 'Find Type',
-                'description' => 'Open post by.',
+                'description' => 'Open post by?',
                 'type' => 'dropdown',
                 'default' => 'slug'
             ]

@@ -1,8 +1,13 @@
 {% set posts = __SELF__.posts %}
+{% set find_type = __SELF__.find_type %}
 
 {% for post in posts %}
 	<h1>
-		<a href="{{ 'post-slug'|page({slug: post.slug}) }}">{{post.title}}</a>
+		{% if find_type == 'slug' %}
+			<a href="{{ 'post-slug'|page({slug: post.slug}) }}">{{post.title}}</a>
+		{% else %}
+			<a href="{{ 'post-slug'|page({slug: post.id}) }}">{{post.title}}</a>
+		{% endif %}
 	</h1>
 	<br>
 	<p>

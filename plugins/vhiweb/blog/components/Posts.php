@@ -5,7 +5,7 @@ use VhiWeb\Blog\Models\Post;
 
 class Posts extends ComponentBase
 {
-    public $posts;
+    public $posts, $find_type;
 
     public function componentDetails()
     {
@@ -18,6 +18,13 @@ class Posts extends ComponentBase
     public function defineProperties()
     {
         return [
+            'setFindType' => [
+                'title' => 'Find Type',
+                'description' => 'Open post by?',
+                'type' => 'dropdown',
+                'default' => 'slug'
+            ],
+
             'results' => [
                 'title' => 'Number of Posts',
                 'description' => 'How many do you want to display?',
@@ -35,6 +42,13 @@ class Posts extends ComponentBase
         ];
     }
 
+    public function getSetFindTypeOptions(){
+        return [
+            'slug' => 'Slug',
+            'id' => 'Id'
+        ];
+    }
+
     public function getSortOrderOptions(){
         return [
             'asc' => 'Ascending',
@@ -44,6 +58,13 @@ class Posts extends ComponentBase
 
     public function onRun(){
         $this->posts = $this->loadPosts();
+
+        if($this->property('setFindType') == 'slug'){
+            $this->find_type = 'slug';
+        }
+        else{
+            $this->find_type = 'id';
+        }
     }
 
     protected function loadPosts(){
